@@ -6,41 +6,41 @@ using namespace std;
 
 
 int main(){
-int numero_tentativas = 0;
-int numero_tentativas_max;
-int Palpite;
-int Numero_da_Sorte = 1+(rand()%100);
+int number_trys = 0;
+int max_number_trys;
+int guess;
+int lucky_number = 1+(rand()%100);
 
-    string Nome_do_jogador;
-    cout << " Como te chamas? : ";
+    string Name_of_player;
+    cout << " What's your name? : ";
 
-    cin >> Nome_do_jogador;
-    cout << " Bem vindo, " << Nome_do_jogador;
+    cin >> Name_of_player;
+    cout << "Welcome, " << Name_of_player;
 
-        cout << " Insere o Numero de Tentativas:";
-        cin >> numero_tentativas_max;
+        cout << " Input the max number of tries";
+        cin >> max_number_trys;
     
     srand((unsigned) time(0));
-    while(numero_tentativas < numero_tentativas_max){ 
+    while(number_trys < max_number_trys){ 
     
-     cout << " Adivinha o Numero correto:";
-        cin >> Palpite;
-        numero_tentativas++;
+     cout << " Guess the right number";
+        cin >> guess;
+           number_trys++;
    
-     if( Numero_da_Sorte > Palpite ){
-       cout << "O número da sorte é maior do que: " << Palpite << endl;
-     }else if( Numero_da_Sorte < Palpite){
-       cout << "O número da sorte é menor do que: " << Palpite << endl;
+     if( lucky_number > guess ){
+       cout << "The lucky number is greater than: " << Palpite << endl;
+     }else if( lucky_number < guess){
+       cout << "The lucky number is less than: " << Palpite << endl;
      }else{
-       cout << Nome_do_jogador << " Parabéns, você acertou!" << endl;
+       cout << Name_of_player << " Congratulations, you got it right!" << endl;
        
      break;
     }
-    if (numero_tentativas == numero_tentativas_max){
-        cout << "Quase acertas-te " << Nome_do_jogador << ", o numero correto era " << Numero_da_Sorte << "!" <<endl;
+    if (number_trys == numero_tentativas_max){
+        cout << "You almost got it right " << Name_of_player << ", the correct number was " << lucky_number << "!" <<endl;
     }
     
     }
-    cout << "Acabou o jogo!" << endl;
+    cout << "The game is over!" << endl;
     return 0;
     }
