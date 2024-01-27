@@ -28,15 +28,15 @@ int lucky_number = 1+(rand()%100);
            number_trys++;
    
      if( lucky_number > guess ){
-       cout << "The lucky number is greater than: " << Palpite << endl;
+       cout << "The lucky number is greater than: " << guess << endl;
      }else if( lucky_number < guess){
-       cout << "The lucky number is less than: " << Palpite << endl;
+       cout << "The lucky number is less than: " << guess << endl;
      }else{
        cout << Name_of_player << " Congratulations, you got it right!" << endl;
        
      break;
     }
-    if (number_trys == numero_tentativas_max){
+    if (number_trys == max_number_trys){
         cout << "You almost got it right " << Name_of_player << ", the correct number was " << lucky_number << "!" <<endl;
     }
     
