@@ -6,10 +6,12 @@ using namespace std;
 
 
 int main(){
+    
 int number_trys = 0;
 int max_number_trys;
 int guess;
 int lucky_number = 1+(rand()%100);
+
 
     string Name_of_player;
     cout << " What's your name? : ";
@@ -17,13 +19,13 @@ int lucky_number = 1+(rand()%100);
     cin >> Name_of_player;
     cout << "Welcome, " << Name_of_player;
 
-        cout << " Input the max number of tries";
+        cout << " Input the max number of tries: ";
         cin >> max_number_trys;
     
     srand((unsigned) time(0));
     while(number_trys < max_number_trys){ 
     
-     cout << " Guess the right number";
+     cout << " Guess the right number: ";
         cin >> guess;
            number_trys++;
    
